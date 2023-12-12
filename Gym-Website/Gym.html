@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">          
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Gym Website</title>
+
+    <style>
+        html{
+            top: 0;
+            left: 0;
+        }
+        .navbar{
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            /* justify-content: space-evenly; */
+            padding: 0.5rem 1rem;
+            border: 2px solid black;
+            list-style: none;
+            /* width: 100%; */
+            height: auto;    
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+            font-size: larger;
+            font-weight: bold;  
+            background-color: rgb(0, 0, 0,0.5);
+            color: white;
+            z-index: 2;
+        }
+        .navbar li{
+            list-style: none;
+            /* display: inline-flex; */
+            /* overflow: auto; */
+            float: inline-end;    /*THIS INLINE HELPS TO FIT THE CONTENT IN ONE LINE */
+            padding: 6px 40px 12px 10px;
+            margin: auto;        
+        }
+        .navbar li:hover{
+            cursor: pointer;
+            color: red;
+            text-decoration: underline;
+        }
+        .navbar ul{
+            float: inline-end;        /*THIS INLINE HELPS TO FIT THE CONTENT IN ONE LINE WITH RESPECT TO THE IMAGE*/
+            /* display: inline;         DO NOT INLINE UL*/
+            /* overflow: auto; */
+            margin-left: auto;
+            padding: 26px 18px 5px 49px;
+        }
+        .navbar img{
+            height: 81px;
+            width: 151px;
+            float: inline-start;     /*  ****THIS INLINE START IS RUINING MY CONTENT FITTING ON NAVBAR */
+            /* position: relative; */
+            padding: 1px 3px 0px 20px;
+            margin: inherit;            /* ****Here auto Gives More than reuired spacce */
+        }
+        .container{
+            /* border: 3px solid rgb(14, 235, 14); */
+            height: 750px;
+            /* display: block; */
+            position: inherit;
+            width: 100%;
+            display: block;
+            top: 0;
+            left: 0;
+
+            z-index: 1;
+                        
+        }
+        .background{
+            /* overflow: hidden;              *****THIS IS HIDDING MY IMAGE*/
+            position: relative;
+            z-index: -1;
+        }    
+        
+        .bgimg{
+            position: absolute;
+            height: 750px;
+            width: 100%;
+
+            /* background: cover; */
+            opacity: 0.8;
+            /* justify-content: center;
+            align-items: center; */
+            /* display: flex; */
+        }
+
+        .box{
+            border: 2px solid ;
+            border-radius: 4px;
+            margin: 50px auto;
+            /* float: inline-start;           ****USE THIS ONY WHEN YOU WANT SOMETHING IN PARALELL*/
+            height: auto;
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+            padding: 10px 10px 15px 10px;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(255, 255, 255, 0.7);
+            position: relative;
+            font-weight: bold;
+            font-size: large;
+            font-family: emoji;
+
+
+            z-index: 1;
+         }
+         input{
+            border-radius: 5px;
+            height: 25px;
+         }
+         input#submit{
+            border-radius: 0%;
+            height: 35px;
+            width: 60px;
+            background-color: rgb(245, 203, 203);
+         }
+
+         .appendix{
+            height: 300px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: black;
+            color: white;
+            justify-content: space-evenly;
+            padding: 10px;
+            margin: auto;
+         }
+
+         .appendix p{
+            margin: 24px auto;
+         }
+         .box h4{
+            font-size: x-large;
+         }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="background">
+            <img 
+            class="bgimg"
+            src="rodrigo-s-2mz9IKab7DE-unsplash.jpg" alt="">
+        </div>
+        <!-- <img src="rodrigo-s-2mz9IKab7DE-unsplash.jpg" alt="" id="bgimg"> -->
+        <div class="navbar">
+            <img src="man-8261108_1280.png" alt="Not Found">
+            <ul>
+                <li>Contact US</li>
+                <li>Enquire</li>
+                <li>About Us</li>
+                <li>Home</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h4>Enquiry</h4>
+            <p>Name: <input type="text" placeholder="Enter Your Name" id="myname"></p>
+            <p>Email I.D.: <input type="email" name="" id="myemail" placeholder="Enter Your Email"></p>
+            <p>Phone No.: <input type="text" placeholder="Enter Your Phone Number"></p>
+            <p>Enuire : <br> <textarea name="" id="mytext" cols="30" rows="5" placeholder="   Ask Us Your Doubt    " style="width: 244px; height: 92px;"></textarea></p>
+            <input type="submit" value="Submit" id="submit">
+        </div>
+    </div>
+    <div class="appendix">
+        <div id="box1">
+            <p>Contact Us</p>
+            <p>Our Trainers</p>
+            <p>Team</p>
+            <p>Equipment</p>
+        </div>
+        <div id="box2">
+            <p>Mission</p>
+            <p>Vission</p>
+            <p>Reviews</p>
+            <p>Photos</p>
+        </div>
+        <div id="box3">
+            <p>Gym Viwes</p>
+            <p>Equipment</p>
+            <p>Reception</p>
+            <p></p>
+        </div>
+        <div id="box4">
+            <p>Mumbai Branch</p>
+            <p>Delhi Branch</p>
+            <p>Banglore Branch</p>
+            <p>Pune Branch</p>
+            <p>Thane Branch</p>
+        </div>
+        <div id="box4">
+            <p>Customers Reviews</p>
+            <p>Products</p>
+            <p>Ambassador</p>
+            <p></p>
+        </div>
+    </div>
+</body>
+</html>
